@@ -1,5 +1,5 @@
 # jittor version of GPT-2
-# variable names are consisted with the pretrained checkpoint file
+# variable names are consistent with the pretrained checkpoint file
 
 import jittor as jt
 from jittor import nn

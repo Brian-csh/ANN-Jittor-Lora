@@ -1,33 +1,18 @@
-#  ------------------------------------------------------------------------------------------
-#  Copyright (c) Microsoft Corporation. All rights reserved.
-#  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
-#  ------------------------------------------------------------------------------------------
+# script to finetune lora on gpt2
 import argparse
 import time
 import math
 import os, sys
 import numpy as np
 import itertools
-sys.path.append('.')
+sys.path.append('..')
 import jittor as jt
 import random
 import loralib
 from tqdm import tqdm
 
 import wandb
-# from loralib import mylora_layers
-# from loralib import mylora_utils
-# from torch.utils.data import DataLoader
-# torch.set_printoptions(threshold=100000)
 
-# from gpu import (
-#     add_gpu_params, 
-#     parse_gpu, 
-#     distributed_opt, 
-#     distributed_gather, 
-#     distributed_sync, 
-#     cleanup
-# )
 from optimizer import (
     create_adam_optimizer, 
     create_optimizer_scheduler, 
