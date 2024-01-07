@@ -1,5 +1,5 @@
 python LoRA/examples/NLG/src/gpt2_decode.py \
-    --vocab ./vocab \
+    --vocab LoRA/examples/NLG/vocab \
     --sample_file ./trained_models/GPT2_M/e2e/predict.35000.b10p08r4.jsonl \
     --input_file LoRA/examples/NLG/data/e2e/test_formatted.jsonl \
     --output_ref_file e2e_ref.txt \
