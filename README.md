@@ -41,14 +41,14 @@ To run the e2e replication,
 1. git clone `https://github.com/microsoft/LoRA.git` to obtain the dataset and some utils and scripts
 2. use `LoRA/examples/NLG/create_datasets.sh` to preprocess the dataset
 3. download the pretrained models using `LoRA/examples/NLG/download_pretrained_checkpoints.sh`
-4. set the paths for `--train_data`, `--valid_data`, `init_checkpoint` in `finetune.sh` and run the script
+4. set the paths for `--train_data`, `--valid_data`, `init_checkpoint` in `finetune.sh` if they are not the same as the default ones in the script and run the script
     - note: please adjust `--train_batch_size` accordingly to avoid gpu memory overflow
     - also, to obtain logging, configure wandb in advance
 5. set the path for `init_checkpoint` in `run_inference.sh` to determine the checkpoint to be used to generate the outputs on e2e
 6. set the path of the output and refernce using `--sample_file` and `--input_file` in `run_metric.sh` and run the script to obtain the results
 
 For BoolQ,
-1. (download)[https://github.com/google-research-datasets/boolean-questions] and preprocess the data using `change_key.py`
+1. [download](https://github.com/google-research-datasets/boolean-questions) and preprocess the data using `change_key.py`
 2. split the data into test, valid, train
 3. use the same procedures as e2e to finetune and generate the output (using `finetune.sh` and `run_inference.sh`)
 4. use `eval_boolq.py` to get the metrics
