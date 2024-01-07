@@ -37,6 +37,7 @@ self.c_attn = mylora_layers.MergedLinear(
         )
 ```
 To run the e2e replication, 
+1. `cd e2e_replication`
 1. git clone `https://github.com/microsoft/LoRA.git` to obtain the dataset and some utils and scripts
 2. use `LoRA/examples/NLG/create_datasets.sh` to preprocess the dataset
 3. download the pretrained models using `LoRA/examples/NLG/download_pretrained_checkpoints.sh`
